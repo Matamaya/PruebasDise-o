@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+      .cuadro {
+        width: 150px;
+        height: 150px;
+        background-color: lightblue;
+        animation: fadeInOut 3s infinite; /* La animación dura 3 segundos y se repite indefinidamente */
+      }
+      @keyframes fadeInOut {
+        0%,
+        100% {
+          opacity: 0;
+        } /* Al inicio y al final la opacidad es 0 (invisible) */
+        50% {
+          opacity: 1;
+        } /* En el medio la opacidad es 1 (completamente visible) */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cuadro"></div>
+  </body>
+</html>

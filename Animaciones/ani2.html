@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+      .cuadro {
+        width: 150px;
+        height: 150px;
+        background-color: lightgreen;
+        animation: parpadeo 1s infinite;
+      }
+      @keyframes parpadeo {
+        0%,
+        100% {
+          background-color: lightgreen;
+        } /* Al inicio y final el cuadro es verde claro */
+        50% {
+          background-color: darkgreen;
+        } /* En el medio es verde oscuro */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cuadro"></div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+      .cuadro {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        position: relative;
+        animation: rebotar 2s infinite;
+      }
+      @keyframes rebotar {
+        0%,
+        100% {
+          transform: translateY(0);
+        } /* El cuadro está en su posición original */
+        50% {
+          transform: translateY(200px);
+        } /* El cuadro baja 200px en el medio */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cuadro"></div>
+  </body>
+</html>

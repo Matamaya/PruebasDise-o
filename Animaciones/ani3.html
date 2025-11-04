@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+      .cuadro {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        animation: moverYCambiarColor 5s infinite;
+      }
+      @keyframes moverYCambiarColor {
+        0% {
+          transform: translateX(0);
+          background-color: coral;
+        }
+        50% {
+          transform: translateX(300px);
+          background-color: lightcoral;
+        }
+        100% {
+          transform: translateX(0);
+          background-color: coral;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cuadro"></div>
+  </body>
+</html>

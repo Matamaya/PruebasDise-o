@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+.contenedor {
+display: flex; /* Activar Flexbox */
+}
+.columna {
+flex: 1; /* Tamaño básico */
+padding: 20px;
+color: white;
+}
+.columna:nth-child(2) {
+flex-grow: 2; /* La segunda columna crece el doble */
+}
+</style>
+</head>
+<body>
+<div class="contenedor">
+<div class="columna" style="background-color: tomato;">Columna 1</div>
+<div class="columna" style="background-color: cornflowerblue;">Columna 2</div>
+<div class="columna" style="background-color: darkseagreen;">Columna 3</div>
+</div>
+</body>
+</html>
