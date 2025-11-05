@@ -90,3 +90,82 @@ Crear un diseño estilo "Grid" básico usando Flexbox, donde los elementos se di
 <img width="746" height="301" alt="image" src="https://github.com/user-attachments/assets/ce2be196-c1cb-497c-bdcb-3f2c3dc93cfd" />
 
 Al igual que antes usamos flex-wrap para permitir el escalado de elementos por filas
+
+
+### Ejercicio 8: : Usar align-self para personalizar la alineación
+Personalizar la alineación de un solo elemento usando align-self para que no siga el mismo patrón que el resto de los elementos en el contenedor
+<img width="575" height="352" alt="image" src="https://github.com/user-attachments/assets/b01d82f8-6fb6-402f-8d7a-99fb2deddcac" />
+
+### Ejercicio 9: Responsive usando flex-basis
+Usar flex-basis para hacer que los elementos cambien su tamaño base y se adapten mejor a pantallas más pequeñas o más grandes
+
+Cambiando el felx-basis a 20px en la clase "elemento"
+<img width="788" height="308" alt="image" src="https://github.com/user-attachments/assets/f98a68c6-5318-4ef5-b268-397232247b9c" />
+
+## Grid
+
+### 1. Crear un layout de cuadrícula con 3 columnas y 2 filas
+
+Se consigue usando display="grid" y los siguientes parametros en la clase contenedor
+  grid-template-columns: 1fr 1fr 1fr; --> Para especificar tres columnas de igual tamaño
+  grid-template-rows: 1fr 1fr; --> Para especifica sos filas de igual tamaño 
+<img width="901" height="215" alt="image" src="https://github.com/user-attachments/assets/85838111-1db2-4e3a-b910-b4dfcd835fb6" />
+
+### 2. Crear un layout con un encabezado, una barra lateral, un contenido principal y un pie de página
+
+<img width="1541" height="337" alt="image" src="https://github.com/user-attachments/assets/5d8f9c68-1cb3-4b69-92ab-61b5625d9b18" />
+Usamos:  
+  grid-template-areas: Define las áreas de la cuadrícula usando nombres descriptivos.
+  grid-template-columns: Define dos columnas, una pequeña (1fr) y otra más grande (3fr).
+  grid-template-rows: Crea tres filas: una para el encabezado, otra para el contenido, y una más pequeña para el pie de página
+
+Al revisar con inspeccionar queda mucho mas claro
+<img width="896" height="238" alt="image" src="https://github.com/user-attachments/assets/e0d25d52-d53f-4d1b-94cb-494cee4e6c02" />
+
+### 3. Usar grid-column y grid-row para hacer que los elementos ocupen más espacio
+<img width="900" height="450" alt="image" src="https://github.com/user-attachments/assets/a853879c-4ef7-4ee4-bda7-f8b7ac561236" />
+
+Para que funcione usamos:
+        grid-column: 1 / 3; ---> Un elemento cupa dos columnas, en este caso el 2do 
+        grid-row: 2 / 4; ---> Un elemento cupa dos filas, en este caso el 8vo
+
+### 4.  Crear una cuadrícula que cambie su tamaño de acuerdo con el tamaño de la pantalla usando fr y auto.
+<img width="583" height="160" alt="image" src="https://github.com/user-attachments/assets/031682b4-ab51-443d-95bd-14ddd363d939" />
+<img width="310" height="252" alt="image" src="https://github.com/user-attachments/assets/c1f29b61-570b-4b27-ad30-011bb442ad23" />
+
+Ls propiedades especiales son
+  repeat(auto-fill, minmax(100px, 1fr)): Crea columnas que se adaptan al tamaño  de la pantalla. Cada columna tendrá al menos 100px y ocupará una fracción del espacio disponible.
+  auto-fill: Llenará las columnas automáticamente en función del tamaño disponible
+
+
+## Animaciones
+
+Como no se como subir las animaciones dentro del readme, solo indicare los elementos especiales de cada archivo
+
+### 1. Crear una animación de opacidad (fade-in/fade-out)
+
+Creamos un keyframe fadeInOut donde indicamos en la animation que al inicio y final sera invisible, pero entre medio sera visible jugando con la opacidad (en un lapso indeterminado de 3s)
+
+### 2. Crear un efecto de parpadeo (blinking)
+Funciona similar al anterior, pero aca estamos jugando con el valor del background-color en la animacion (no con la opacidad) y esto da ese
+
+### 3. Animación de desplazamiento y cambio de color
+
+Para poder desplazar el elemento lo que hacemos es usar transform: translateX() para mover el cuadro en el eje X (horizontal)
+
+### 4. Animación de rebote (bounce)
+
+Esta vez se usa  transform: translateY() para mover el cuadro en el eje Y (vertical)
+
+### 5.  Crear un efecto de zoom-in y zoom-out
+
+Aquí para escalar el tamaño del elemento se usa una animación con transform: scale(); 
+
+### 6.  Animación de rotación (spin)
+
+Se hace una animación que usa transform:rotate(0deg-360deg) para hacer que el cuadro gire 360 grados
+
+### 7. Crear una animación de deslizamiento (slide-in)
+Aqui la clave es usar "forwards" dentro de animation para que la animacion solo ocurra una vez
+
+
